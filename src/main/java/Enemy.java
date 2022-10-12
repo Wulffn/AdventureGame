@@ -5,8 +5,13 @@ public class Enemy extends Player {
     private boolean isDead;
 
     public Enemy(String enemyName, String description, int health, Weapon weapon) {
-        super.health = health;
-        super.equippedWeapon = weapon;
+        //I stedet for at gøre attributter i player protected så i kan sætte dem, så gør brug af en contructor i superklassen.
+        //Se linje 10 i Player.java
+
+        super(health, weapon); // <- Bedre
+
+        super.health = health; // no
+        super.equippedWeapon = weapon; // no
         this.enemyName = enemyName;
         this.description = description;
         this.isDead = isDead;

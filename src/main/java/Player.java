@@ -7,6 +7,11 @@ public class Player {
     protected Weapon equippedWeapon;
     protected int health;
 
+    public Player(int health, Weapon equippedWeapon) {
+        this.health = health;
+        this.equippedWeapon = equippedWeapon;
+    }
+
     public Player() {
         this.health = 100;
     }
